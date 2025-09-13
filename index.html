@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+<body class="h-full">
+    <div class="max-w-[1400px] w-full mr-auto ml-auto pr-[10px] pl-[10px] h-full mt-5">
+        <div id="loading" class="flex justify-center align-middle h-full">
+            <span class="loading loading-spinner w-[70px] text-white"></span>
+        </div>
+        <!-- ERROR  -->
+        <div id="error" class="hidden flex flex-col justify-center place-items-center align-middle h-[600px]">
+        <svg class="size-40 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg>
+        <p class="text-white font-semibold text-2xl">Nimadur xato ketdi!😢</p>
+        </div>
+        <!-- SKELETON  -->
+        <div id="skeleton" class="hidden grid grid-cols-3 grid-rows-3 gap-5 gap-5">
+            <div class="flex w-96 flex-col gap-4">
+                <div class="skeleton h-32 w-full"></div>
+                <div class="skeleton h-4 w-28"></div>
+                <div class="skeleton h-4 w-full"></div>
+                <div class="skeleton h-4 w-full"></div>
+              </div>
+              <div class="flex w-96 flex-col gap-4">
+                <div class="skeleton h-32 w-full"></div>
+                <div class="skeleton h-4 w-28"></div>
+                <div class="skeleton h-4 w-full"></div>
+                <div class="skeleton h-4 w-full"></div>
+              </div>
+              <div class="flex w-96 flex-col gap-4">
+                <div class="skeleton h-32 w-full"></div>
+                <div class="skeleton h-4 w-28"></div>
+                <div class="skeleton h-4 w-full"></div>
+                <div class="skeleton h-4 w-full"></div>
+              </div>
+              <div class="flex w-96 flex-col gap-4">
+                <div class="skeleton h-32 w-full"></div>
+                <div class="skeleton h-4 w-28"></div>
+                <div class="skeleton h-4 w-full"></div>
+                <div class="skeleton h-4 w-full"></div>
+              </div>
+              <div class="flex w-96 flex-col gap-4">
+                <div class="skeleton h-32 w-full"></div>
+                <div class="skeleton h-4 w-28"></div>
+                <div class="skeleton h-4 w-full"></div>
+                <div class="skeleton h-4 w-full"></div>
+              </div>
+              <div class="flex w-96 flex-col gap-4">
+                <div class="skeleton h-32 w-full"></div>
+                <div class="skeleton h-4 w-28"></div>
+                <div class="skeleton h-4 w-full"></div>
+                <div class="skeleton h-4 w-full"></div>
+              </div>
+              <div class="flex w-96 flex-col gap-4">
+                <div class="skeleton h-32 w-full"></div>
+                <div class="skeleton h-4 w-28"></div>
+                <div class="skeleton h-4 w-full"></div>
+                <div class="skeleton h-4 w-full"></div>
+              </div>
+              <div class="flex w-96 flex-col gap-4">
+                <div class="skeleton h-32 w-full"></div>
+                <div class="skeleton h-4 w-28"></div>
+                <div class="skeleton h-4 w-full"></div>
+                <div class="skeleton h-4 w-full"></div>
+              </div>
+              <div class="flex w-96 flex-col gap-4">
+                <div class="skeleton h-32 w-full"></div>
+                <div class="skeleton h-4 w-28"></div>
+                <div class="skeleton h-4 w-full"></div>
+                <div class="skeleton h-4 w-full"></div>
+              </div>
+        </div>
+        <!-- TIME  -->
+        <div id="time" class="time-container flex gap-1 justify-center text-4xl hidden">
+            <span id="hour">Hh</span>
+            <span id="minute">Mm</span>
+            <span id="second">Ss</span>
+        </div>
+        <!-- <form id="form" class="flex flex-col gap-3 hidden">
+            <div>
+                <input class="border-gray-500 opacity-50 border-2 p-1" type="text" placeholder="Car name" name="name" >
+            </div>
+            <div>
+                <textarea class="border-gray-500 opacity-50 border-2 p-1" name="description" placeholder="Car info" ></textarea>
+            </div>
+            <div>
+                <input class="border-gray-500 opacity-50 border-2 p-1" type="number" name="price" placeholder="Price" >
+            </div>
+            <div>
+                <input class="border-gray-500 opacity-50 border-2 p-1" type="text" name="category" placeholder="Category" >
+            </div>
+    
+           <div class="flex gap-3 justify-center mt-5">
+            <button id="editBtn" type="submit" class="btn w-15">edit</button>
+            <button id="cancelBtn" class="btn w-15">cancel</button>
+            <button type="reset" class="btn w-15">reset</button>
+           </div>
+        </form> -->
+        <!-- MODAL  -->
+       <div>
+         <button id="modalBtn" class="btn mb-5 flex hidden bg-primary hover:bg-gray-400 hover:text-black" onclick="my_modal_1.showModal()">Add New Car</button>
+        <dialog id="my_modal_1" class="modal">
+  <div id="modalBox" class="modal-box">
+    <span class="flex justify-center mb-3"><h2 class="text-2xl">Add New Car</h2></span>
+    <form id="form" class="flex flex-col gap-3">
+        <div>
+            <input class="border-gray-500 opacity-50 border-2 p-1" type="text" placeholder="Car name" name="name" required>
+        </div>
+        <div>
+            <textarea class="border-gray-500 opacity-50 border-2 p-1" name="description" placeholder="Car info" required></textarea>
+        </div>
+        <div>
+            <input class="border-gray-500 opacity-50 border-2 p-1" type="number" name="price" placeholder="Price" required>
+        </div>
+        <div>
+            <input class="border-gray-500 opacity-50 border-2 p-1" type="text" name="category" placeholder="Category" required>
+        </div>
+
+       <div class="flex gap-3 justify-center mt-5">
+        <button id="addBtn" type="submit" class="btn w-15">➕</button>
+        <button type="reset" class="btn w-15">Reset</button>
+       </div>
+    </form>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+        </dialog>
+        <!-- CONTAINER  -->
+        <div id="container" class="grid grid-cols-3 grid-rows-3 gap-5">
+        </div>
+       </div>
+        <!-- PAGINATION  -->
+        <div id="pagination" class="flex gap-5 justify-center hidden">
+            <button id="prev" class="btn-accent text-2xl cursor-pointer hover:opacity-80">⬅️</button>
+            <button id="next" class="btn-accent text-2xl cursor-pointer hover:opacity-80">➡️</button>
+        </div>
+       </div>
+    
+       <!-- CARD TEMPLATE  -->
+       <template id="cardTemplate">
+        <div>
+            <div class="card bg-gray-400 text-black hover:opacity-85 w-96">
+                <div class="card-body">
+                  <h2 class="card-title"></h2>
+                  <p></p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary delete-btn bg-primary hover:bg-gray-400 hover:text-black hover:border-gray-800 shadow-none">🗑</button>
+                    <button class="btn btn-primary edit-btn bg-primary hover:bg-gray-400 hover:text-black hover:border-gray-800 shadow-none">edit</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+       </template>
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
