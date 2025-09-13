@@ -24,7 +24,7 @@ const elCancelBtn = document.getElementById("cancelBtn")
     }, 1000) 
     
 
-    let editID = null;
+
     
     const limit = 6;
     let skip = 0;
@@ -101,8 +101,8 @@ document.addEventListener("click", (evt) => {
         deleteEl(evt.target.id)
 
     if(evt.target.classList.contains("edit-btn"))
-        getById(evt.target.id)
-        editID = evt.target.id
+        // getById(evt.target.id)
+        // editID = evt.target.id
         elEditForm.classList.remove("hidden")
     
 })
@@ -110,38 +110,38 @@ document.addEventListener("click", (evt) => {
 // EDIT EL 
 
 
-function editEl (editedEL){
-    fetch(`https://json-api.uz/api/project/fn43/cars/${editedEL.id}`,{
-        method:"PATCH",
-        headers:{
-            "Content-Type":"application/json",
-        },
-        body:JSON.stringify(editedEL),
-    }).then((res) => {
-        init()
-    })
-    .finally(() => {})
-}
+// function editEl (editedEL){
+//     fetch(`https://json-api.uz/api/project/fn43/cars/${editedEL.id}`,{
+//         method:"PATCH",
+//         headers:{
+//             "Content-Type":"application/json",
+//         },
+//         body:JSON.stringify(editedEL),
+//     }).then((res) => {
+//         init()
+//     })
+//     .finally(() => {})
+// }
 
-function getById (id) {
-    fetch(`https://json-api.uz/api/project/fn43/cars/${id}`)
-    .then((res) => {
-        return res.json()
-    }).then((res) => {
-        fill(res)
-    }).finally(() => {})
-}
+// function getById (id) {
+//     fetch(`https://json-api.uz/api/project/fn43/cars/${id}`)
+//     .then((res) => {
+//         return res.json()
+//     }).then((res) => {
+//         fill(res)
+//     }).finally(() => {})
+// }
 
-function fill (obj) {
-    elEditForm.name.value = obj.name;
-    elEditForm.description.value = obj.description;
-    elEditForm.price.value = obj.price;
-    elEditForm.category.value = obj.category;
-}
+// function fill (obj) {
+//     elEditForm.name.value = obj.name;
+//     elEditForm.description.value = obj.description;
+//     elEditForm.price.value = obj.price;
+//     elEditForm.category.value = obj.category;
+// }
 
-elCancelBtn.addEventListener("click",() => {
-    elEditForm.classList.add("hidden")
-})
+// elCancelBtn.addEventListener("click",() => {
+//     elEditForm.classList.add("hidden")
+// })
 
 
 elForm.addEventListener("submit", (evt) => {
@@ -152,18 +152,7 @@ elForm.addEventListener("submit", (evt) => {
     formData.forEach((value, key) => {
         result[key] = value
     })
-    if(evt.submitter.id === "addBtn"){
-        addEl(result)
-    }
-
-    if(evt.submitter.id === "edit-btnn"){
-        if(editID){
-            result.id = editID;
-            editEl()
-            editID = null
-        }
-    }
-
+    add
     elForm.reset()
 })
 
