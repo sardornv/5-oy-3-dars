@@ -152,7 +152,7 @@ elForm.addEventListener("submit", (evt) => {
     formData.forEach((value, key) => {
         result[key] = value
     })
-    add
+    addEl(result)
     elForm.reset()
 })
 
